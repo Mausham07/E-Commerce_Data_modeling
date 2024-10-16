@@ -4,6 +4,9 @@
 
 Access the data files [here](https://drive.google.com/drive/u/0/search?q=data).
 
+dDesign: ![design](design)
+
+
 
 ## Overview
 This script loads various datasets related to an e-commerce platform into a PostgreSQL database. The datasets include information about aisles, departments, products, orders, and order products. The script ensures that the database schema is properly set up and that data integrity is maintained by checking for valid order IDs.
