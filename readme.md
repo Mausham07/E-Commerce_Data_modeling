@@ -4,7 +4,7 @@
 
 Access the data files [here](https://drive.google.com/drive/u/0/search?q=data).
 
-dDesign: ![design](design)
+dDesign: ![design](design.png)
 
 
 
