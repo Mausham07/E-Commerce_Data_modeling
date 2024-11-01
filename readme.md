@@ -5,6 +5,9 @@
 **Project Description**:  
 This project consists of a script designed to load various e-commerce datasets into a PostgreSQL database. The datasets include details about aisles, departments, products, orders, and order products. The script establishes the database schema, checks data integrity by validating order IDs, and handles data loading efficiently.
 
+Design: 
+![design](design.png)
+
 **Project Goals**:  
 - Automate the process of loading e-commerce data into a PostgreSQL database.
 - Ensure data integrity through schema setup and validation checks.
