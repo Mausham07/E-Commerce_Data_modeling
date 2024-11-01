@@ -2,7 +2,7 @@
 
 ## Data Resources
 
-Access the data files [here](https://drive.google.com/drive/u/0/search?q=data).
+Access the data files [here](https://drive.google.com/drive/folders/1stFuRQCpOv4reFB0286-GAV2wzkiQpHs?usp=sharing).
 
 dDesign: ![design](design.png)
 
