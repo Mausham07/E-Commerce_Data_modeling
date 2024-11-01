@@ -1,3 +1,7 @@
+-- 1. Create a temporary table that joins the orders, order_products, and products tables.
+--    This table, `order_info`, will contain detailed information about each order, including
+--    products purchased and the associated department and aisle information.
+
 CREATE TEMPORARY TABLE order_info AS
 SELECT 
     o.order_id AS order_id,         -- Order ID from orders table
@@ -20,6 +24,10 @@ select * from order_info;
 SELECT * FROM products;
 select * from order_products;
 
+-- 2. Create a temporary table that groups orders by product, `product_order_summary`,
+--    providing each product's total purchase count, reorder count, and average add-to-cart order.
+
+
 CREATE TEMPORARY TABLE product_order_summary AS
     SELECT product_id, product_name, COUNT(*) AS total_orders,
            COUNT(CASE WHEN reordered = 1 THEN 1 ELSE NULL END) AS total_reorders,
@@ -29,6 +37,8 @@ CREATE TEMPORARY TABLE product_order_summary AS
 
 SELECT * from product_order_summary;
 
+-- 3. Create a temporary table that groups orders by department, `department_order_summary`,
+--    summarizing purchase totals and averages, including weekday vs weekend purchases and average order time.
 
 CREATE TEMPORARY TABLE department_order_summary AS
     SELECT department_id, COUNT(*) AS total_products_purchased,
@@ -41,6 +51,10 @@ CREATE TEMPORARY TABLE department_order_summary AS
 
 select * from department_order_summary;
 
+-- 4. Create a temporary table that groups orders by aisle, `aisle_order_summary`,
+--    listing the top 10 most popular aisles based on total products purchased, 
+--    along with the count of unique products in each aisle.
+
 CREATE TEMPORARY TABLE aisle_order_summary AS
     SELECT aisle_id, COUNT(*) AS total_products_purchased,
            COUNT(DISTINCT product_id) AS total_unique_products_purchased
@@ -51,6 +65,9 @@ CREATE TEMPORARY TABLE aisle_order_summary AS
 
 select * from aisle_order_summary;
 
+-- 5. Combine the information from all temporary tables into `product_behavior_analysis`,
+--    which provides a comprehensive view of each product including its purchase stats, 
+--    department, and aisle details. 
 CREATE TEMPORARY TABLE product_behavior_analysis AS
     SELECT pi.product_id, pi.product_name, pi.department_id, d.department, pi.aisle_id, a.aisle,
            pos.total_orders, pos.total_reorders, pos.avg_add_to_cart,
