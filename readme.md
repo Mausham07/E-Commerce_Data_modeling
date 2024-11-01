@@ -4,7 +4,7 @@
 
 Access the data files [here](https://drive.google.com/drive/folders/1stFuRQCpOv4reFB0286-GAV2wzkiQpHs?usp=sharing).
 
-dDesign: ![design](design.png)
+Design: ![design](design.png)
 
 
 
