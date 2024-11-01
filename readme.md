@@ -21,7 +21,7 @@ Design:
    ```bash
    pip install pandas psycopg2 sqlalchemy
 
-## Prepare CSV Files
+2. **Prepare CSV Files**
 
 Ensure the following CSV files are available in a directory named `data` and you can acess these file from [data](https://drive.google.com/drive/folders/1stFuRQCpOv4reFB0286-GAV2wzkiQpHs?usp=sharing):
 
@@ -31,7 +31,7 @@ Ensure the following CSV files are available in a directory named `data` and you
 - `orders.csv`
 - `products.csv`
 
-## Configure Database
+3.  **Configure Database**
 
 Adjust the connection parameters (`dbname`, `user`, `password`, `port`) in the script to match your PostgreSQL setup.
 
